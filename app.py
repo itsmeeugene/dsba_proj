@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
 import pandas as pd
-import logging
 
 app = Flask(__name__)
-app.logger.setLevel(logging.DEBUG)
 
 
 @app.route('/', methods=['POST', 'GET'])
