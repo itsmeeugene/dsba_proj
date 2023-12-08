@@ -20,6 +20,7 @@ df = pd.read_csv("car.csv")
 
 df['price_usd'] = df['selling_price'] / 83
 df['owner_num'] = df['owner'].apply(owner_num)
+st.table(df[:5])
 
 st.markdown("The majority of cars are manual")
 temp = pd.DataFrame({'count': df.transmission.value_counts(), 'transmission': df.transmission.value_counts().index})
