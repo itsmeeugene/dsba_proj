@@ -40,6 +40,26 @@ footer {
   text-align: left;
   font-family: sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  background: gray;
+  padding: 10px;
+  border-radius: 20%;
+}
+
+.scroll a:hover {
+  background-color: #646464;
+}
 </style>
 
 
@@ -16878,16 +16898,20 @@ class="
 </div>
 </div>
 </div>
-<form method="post" action="/">
+<form id="down" method="post" action="/">
     <h1>Input start and end to compute an average of a slice of car prices</h1>
     <input type="text" name="start">
     <input type="text" name="end">
     <input type="submit" value="Submit">
 </form>
+<div class="scroll">
+  <a href="#down"><img src="arrow.png" style="width:42px;height:42px;"></a>
+</div>
 <p>{{ result }}</p>
 <footer>
   <p>Evgeny Pavlov, copyright 2023, MIT Licence</p>
 </footer>
+
 </body>
 
 
